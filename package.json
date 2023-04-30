@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "request": "^2.88.2",
+    "xlsx": "^0.18.5"
+  },
+  "name": "cricinfo-webscraper-master",
+  "description": "Build ESPN Cricinfo webscraper that scrapes whole IPL using NodeJS Used  -> Java Script  -> NPM module -> JSON",
+  "version": "1.0.0",
+  "main": "allmatch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
