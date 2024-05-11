@@ -1,5 +1,6 @@
 
-const url = "https://www.espncricinfo.com/series/indian-premier-league-2022-1298423";
+// const url = "https://www.espncricinfo.com/series/indian-premier-league-2022-1298423";
+const url = "https://www.espncricinfo.com/series/indian-premier-league-2023-1345038";
 // Venue date opponent result runs balls fours sixes sr
 
 const request = require('request');

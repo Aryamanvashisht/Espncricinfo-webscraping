@@ -31,20 +31,9 @@ function extractMatchDetails(html) {
     let stringArr = descElem.text().split(",");
     let venue = stringArr[1]?.trim()
     let date = (stringArr[2] + stringArr[3]).toString().trim()
-    // console.log(venue);
-    // console.log(date);
-    //console.log(descElem.text());
-    //console.log(result.text());
-
-
-    //.ds-w-full.ds-bg-fill-content-prime.ds-overflow-hidden.ds-border.ds-border-line.ds-mb-4 .ds-p-0
-    //.ds-w-full.ds-bg-fill-content-prime.ds-overflow-hidden.ds-border.ds-border-line.ds-mb-4:lt(2)
-    //.ds-rounded-lg.ds-mt-2
-    //.ds-mt-3
     let innings = $('.ds-w-full.ds-bg-fill-content-prime.ds-overflow-hidden.ds-border.ds-border-line.ds-mb-4').slice(0, 2)
     // let htmlString = ""
     for (let i = 0; i < innings.length; i++) {
-        //console.log(`${date} ${venue} ${player.text()} VS ${opponent.text()} AND ${result.text()}`);
         let cInnings = $(innings[i]);
         let allRows = cInnings.find('.ds-w-full.ds-table.ds-table-md.ds-table-auto.ci-scorecard-table tbody tr')
         for (let j = 0; j < allRows.length; j++) {
@@ -57,7 +46,6 @@ function extractMatchDetails(html) {
                 let fours = $(allCols[5]).text().trim()
                 let sixes = $(allCols[6]).text().trim()
                 let sr = $(allCols[7]).text().trim()
-                //console.log(`${playername} | ${runs} | ${balls} | ${fours} | ${sixes} | ${sr}`);
                 processplayers(player.text(), playername,runs, balls, fours, sixes, sr,opponent.text(),
                 venue, date, result.text())
             }
